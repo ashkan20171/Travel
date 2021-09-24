@@ -12,8 +12,14 @@ function Navbar() {
             </Link>
               <div className="menu-icon" onClick={menuHandler}>
               <i className={menuState ?'fas fa-times' : 'fas fa-bars'} />
-
-               </div>   
+               </div>  
+               <ul className={menuState ?'nav-menu active' : 'nav-menu'}>
+                  <li className="nav-item">
+                      <Link to="/" className="nav-links">
+                          صفحه اصلی
+                      </Link>
+                      </li> 
+                   </ul> 
             </div>
         </nav>
     )
