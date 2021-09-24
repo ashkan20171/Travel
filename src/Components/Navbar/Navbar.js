@@ -4,6 +4,7 @@ import './Navbar.css'
 function Navbar() {
     const[menuState,setMenuState] = useState(false)
     const menuHandler = () =>setMenuState(!menuState)
+    const closeMobileMenu = () => setMenuState(false)
     return (
         <nav className="navbar">
             <div className="navbar-container">
@@ -15,10 +16,29 @@ function Navbar() {
                </div>  
                <ul className={menuState ?'nav-menu active' : 'nav-menu'}>
                   <li className="nav-item">
-                      <Link to="/" className="nav-links">
+                      <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                           صفحه اصلی
                       </Link>
                       </li> 
+                      <li className="nav-item">
+                      <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                          گردشگری
+                      </Link>
+                      </li>
+                      <li className="nav-item">
+                      <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                          تور
+                      </Link>
+                      </li>
+                      <li>
+                          <Link
+                           to="/"
+                           className="nav-links-mobile"
+                           onClick={closeMobileMenu}
+                           >
+                               ثبت نام
+                           </Link>
+                      </li>
                    </ul> 
             </div>
         </nav>
