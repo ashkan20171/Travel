@@ -1,10 +1,21 @@
 import React ,{useState} from 'react'
 import {Link} from 'react-router-dom'
+import Button from '../Ui/Button'
 import './Navbar.css'
 function Navbar() {
     const[menuState,setMenuState] = useState(false)
+    const [buttonState,setButtonState] = useState(true)
     const menuHandler = () =>setMenuState(!menuState)
     const closeMobileMenu = () => setMenuState(false)
+
+    const handleButton = () =>{
+        if(window.innerWidth<=960){
+            setButtonState(false)
+        }else{
+            setButtonState(true) 
+        }
+    }
+    window.addEventListener('resize',handleButton)
     return (
         <nav className="navbar">
             <div className="navbar-container">
@@ -40,6 +51,12 @@ function Navbar() {
                            </Link>
                       </li>
                    </ul> 
+                   {
+                       buttonState ?
+                    <Button buttonStyle="btn--outline" to="/">
+                        ثبت نام
+                    </Button>:null
+                   }
             </div>
         </nav>
     )
