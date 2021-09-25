@@ -1,17 +1,29 @@
 
-import './App.css';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+
 import Navbar from './Components/Navbar/Navbar'
-import Home from './Components/pages/Home'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import './App.css';
+import Home from './Components/Pages/Home';
+import Tour from './Components/Pages/Tour'
+import Tourism from './Components/Pages/Tourism'
+import SignUp from './Components/Pages/SignUp'
+import Footer from './Components/Footer/Footer'
+import ScrollToTop  from './Components/ScrollToTop'
 function App() {
   return (
     <>
-      <Router>
-       <Navbar />
-       <Switch>
-         <Route path="/" exact component={Home} />
-       </Switch>
-      </Router>
+    <Router>
+      <ScrollToTop />
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/tour" exact component={Tour} />
+        <Route path="/tourism" exact component={Tourism} />
+        <Route path="/sign-up" exact component={SignUp} />
+      </Switch>
+      <Footer />
+    </Router>
+     
     </>
   );
 }
