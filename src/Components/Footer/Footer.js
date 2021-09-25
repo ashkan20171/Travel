@@ -37,9 +37,9 @@ function Footer() {
                 </div>
                 <div className="footer-link-wrapper">
                     <div className="footer-link-items">
-                        <h2>رزور </h2>
-                        <Link to="/">رزور هتل</Link>
-                        <Link to="/">رزور بلیط هواپیما</Link>
+                        <h2>رزرو </h2>
+                        <Link to="/">رزرو هتل</Link>
+                        <Link to="/">رزرو بلیط هواپیما</Link>
                         <Link to="/">رزرو بلیط قطار</Link>
                     </div>
                     <div className="footer-link-items">
@@ -57,7 +57,7 @@ function Footer() {
                             Travel <i className="fab fa-typo3"/>
                         </Link>
                     </div>
-                    <small className="website-rights">Travel © 2020</small>
+                    <small className="website-rights">Travel © 2021</small>
                     <div className="social-icons">
                         <Link 
                             className="social-icon-link facebook"
